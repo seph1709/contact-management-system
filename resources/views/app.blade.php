@@ -10,6 +10,19 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=M+PLUS+Rounded+1c&family=Text+Me+One&family=Varela+Round&display=swap"
+        rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=M+PLUS+Rounded+1c&family=Varela+Round&display=swap"
+        rel="stylesheet"
+        /> 
+
         <!-- Scripts -->
         @routes
         @viteReactRefresh
