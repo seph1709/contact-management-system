@@ -27,6 +27,11 @@ export default function Register() {
                 const { name } = user;
                 const { id } = user;
 
+                localStorage.setItem("startingData", JSON.stringify([]));
+                localStorage.setItem("userName", name);
+                localStorage.setItem("rawToken", rawToken);
+                localStorage.setItem("userID", id);
+
                 router.visit(`workplace`, {
                     headers: {
                         Accept: "application/json",

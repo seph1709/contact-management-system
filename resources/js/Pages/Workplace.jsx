@@ -16,6 +16,8 @@ export default function Workplace() {
         router.visit("login");
     }
 
+    console.log(startingDataLocal);
+
     const [openModal, setOpenModal] = useState(false);
     const [openModalUpdate, setOpenModalUpdate] = useState(false);
     const { data, setData } = useForm();
