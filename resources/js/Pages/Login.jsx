@@ -6,8 +6,20 @@ import { useState } from "react";
 import { IoLogIn } from "react-icons/io5";
 
 export default function Login() {
+    let startingDataLocal, rawTokenLocal, userIDLocal, userNameLocal;
+
+    startingDataLocal = JSON.parse(localStorage.getItem("startingData"));
+    rawTokenLocal = localStorage.getItem("rawToken");
+    userIDLocal = localStorage.getItem("userID");
+    userNameLocal = localStorage.getItem("userName");
+
+    if (startingDataLocal && rawTokenLocal && userIDLocal && userNameLocal) {
+        router.visit("workplace");
+    }
+
     const { get, data, setData, errors } = useForm();
     const [errorMessage, setErrorMessage] = useState();
+
     function handleSubmit(e) {
         e.preventDefault();
         fetch("/api/login", {
