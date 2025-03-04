@@ -15,7 +15,7 @@
 ## Dev Run 
 If you don't have this three [Git](https://github.com/git-guides/install-git)
 [Laravel](https://laravel.com/docs/7.x/installation)
-[NodeJs](https://nodejs.org/en) kindly install it. If you already installed from your computer you can proceed.
+[NodeJs](https://nodejs.org/en) kindly install it. If have you already installed from your computer you can proceed.
 
 ``` bash
 git clone https://github.com/seph1709/contact-management-system.git
