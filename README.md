@@ -25,7 +25,6 @@ git clone https://github.com/seph1709/contact-management-system.git
 ```
 ``` code
 cd Contact-Management-System
-
 ```
 ``` code
 npm install
@@ -41,7 +40,6 @@ open new terminal
 php artisan serve
 ```
 now go to
-
 ``` bash
 http://127.0.0.1:8000
 
