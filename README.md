@@ -24,7 +24,7 @@ If you don't have this three [Git](https://github.com/git-guides/install-git)
 git clone https://github.com/seph1709/contact-management-system.git
 ```
 ``` code
-cd Contact-Management-System
+cd contact-management-system
 ```
 ``` code
 npm install
