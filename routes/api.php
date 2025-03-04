@@ -28,7 +28,7 @@ Route::post('register',function(Request $request){
 
 Route::post('login',function(Request $request){
     $request->validate([
-        'email' => 'required|email|exists:users',
+        'email' => 'required|email',
         'password' => 'required'
     ]);
 
@@ -37,7 +37,8 @@ Route::post('login',function(Request $request){
     if (!$user || !Hash::check($request->password, $user->password)) {
         return [
             'errors' => [
-                'email' => ['The provided credentials are incorrect.']
+                'email' => ["user doesn't exist"],
+                'password' => ["user doesn't exist"]
             ]
         ];
 

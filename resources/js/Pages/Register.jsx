@@ -3,9 +3,16 @@ import { router } from "@inertiajs/react";
 import { IoMdPersonAdd } from "react-icons/io";
 import { useState } from "react";
 import { FaPenToSquare } from "react-icons/fa6";
+import { BiShow } from "react-icons/bi";
+import { BiHide } from "react-icons/bi";
 export default function Register() {
     const { get, data, setData, errors } = useForm();
     const [errorMessage, setErrorMessage] = useState();
+    const [togglePassword, setTogglePassword] = useState("password");
+    const [toggleConfPassword, setToggleConfPassword] = useState("password");
+    const [errorEmail, setErrorEmail] = useState();
+    const [errorPassword, setErrorPassword] = useState();
+    const [errorUsername, setErrorUserName] = useState();
 
     function loginUser() {
         fetch("/api/login", {
@@ -60,10 +67,23 @@ export default function Register() {
             },
             body: JSON.stringify(data),
         })
-            .then((response) => {
+            .then(async (response) => {
                 console.log(response);
                 if (response.status !== 200) {
                     setErrorMessage(response.statusText);
+                    const res = await response.json();
+                    const { errors } = res;
+
+                    const { email, password, name } = errors;
+                    if (email) {
+                        setErrorEmail(email);
+                    }
+                    if (password) {
+                        setErrorPassword(password);
+                    }
+                    if (name) {
+                        setErrorUserName(name);
+                    }
                 } else {
                     loginUser();
                 }
@@ -93,8 +113,14 @@ export default function Register() {
                                 <label htmlFor="username">username</label>
                                 <input
                                     name="username"
-                                    onChange={(e) =>
-                                        setData("name", e.target.value)
+                                    onChange={(e) => {
+                                        setData("name", e.target.value);
+                                        setErrorUserName(null);
+                                    }}
+                                    style={
+                                        errorUsername
+                                            ? { border: "1px solid red" }
+                                            : null
                                     }
                                 ></input>
                             </div>
@@ -102,8 +128,14 @@ export default function Register() {
                                 <label htmlFor="email">email</label>
                                 <input
                                     name="email"
-                                    onChange={(e) =>
-                                        setData("email", e.target.value)
+                                    onChange={(e) => {
+                                        setData("email", e.target.value);
+                                        setErrorEmail(null);
+                                    }}
+                                    style={
+                                        errorEmail
+                                            ? { border: "1px solid red" }
+                                            : null
                                     }
                                 ></input>
                             </div>
@@ -111,10 +143,58 @@ export default function Register() {
                                 <label htmlFor="password">password</label>
                                 <input
                                     name="password"
-                                    onChange={(e) =>
-                                        setData("password", e.target.value)
+                                    onChange={(e) => {
+                                        setData("password", e.target.value);
+                                        setErrorPassword(null);
+                                    }}
+                                    type={togglePassword}
+                                    style={
+                                        errorPassword
+                                            ? { border: "1px solid red" }
+                                            : null
                                     }
                                 ></input>
+                                <div
+                                    role="button"
+                                    id="toggle-password"
+                                    onClick={(e) => {
+                                        setTogglePassword((v) => {
+                                            if (v === "password") {
+                                                return "text";
+                                            } else {
+                                                return "password";
+                                            }
+                                        });
+                                    }}
+                                >
+                                    {" "}
+                                    <span></span>
+                                    {togglePassword === "password" ? (
+                                        <>
+                                            {" "}
+                                            <BiHide
+                                                size={14}
+                                                style={{
+                                                    display: "inline",
+                                                    marginRight: "5px",
+                                                }}
+                                            />{" "}
+                                            show
+                                        </>
+                                    ) : (
+                                        <>
+                                            <BiShow
+                                                size={14}
+                                                style={{
+                                                    display: "inline",
+                                                    marginRight: "5px",
+                                                }}
+                                            />
+                                            hide
+                                        </>
+                                    )}
+                                    {"  "} password
+                                </div>
                             </div>
                             <div>
                                 <label htmlFor="confirm-password">
@@ -122,13 +202,61 @@ export default function Register() {
                                 </label>
                                 <input
                                     name="confirm-password"
-                                    onChange={(e) =>
+                                    type={toggleConfPassword}
+                                    onChange={(e) => {
                                         setData(
                                             "password_confirmation",
                                             e.target.value
-                                        )
+                                        );
+                                        setErrorPassword(null);
+                                    }}
+                                    style={
+                                        errorPassword
+                                            ? { border: "1px solid red" }
+                                            : null
                                     }
                                 ></input>
+                                <div
+                                    role="button"
+                                    id="toggle-password"
+                                    onClick={(e) => {
+                                        setToggleConfPassword((v) => {
+                                            if (v === "password") {
+                                                return "text";
+                                            } else {
+                                                return "password";
+                                            }
+                                        });
+                                    }}
+                                >
+                                    {" "}
+                                    <span></span>
+                                    {toggleConfPassword === "password" ? (
+                                        <>
+                                            {" "}
+                                            <BiHide
+                                                size={14}
+                                                style={{
+                                                    display: "inline",
+                                                    marginRight: "5px",
+                                                }}
+                                            />{" "}
+                                            show
+                                        </>
+                                    ) : (
+                                        <>
+                                            <BiShow
+                                                size={14}
+                                                style={{
+                                                    display: "inline",
+                                                    marginRight: "5px",
+                                                }}
+                                            />
+                                            hide
+                                        </>
+                                    )}
+                                    {"  "} password
+                                </div>
                             </div>
                             {errorMessage && (
                                 <div style={{ color: "red", fontSize: "14px" }}>

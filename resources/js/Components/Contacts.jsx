@@ -21,13 +21,13 @@ function Contacts({ details, onItemSelected, handleDeleteItem }) {
     return (
         <>
             <div id="cell">
-                <div style={{ width: "180px" }}>
+                <div id="user-name">
                     {name} {lastname}
                 </div>
-                <div style={{ width: "350px" }}>{address}</div>
-                <div style={{ width: "130px" }}>{number}</div>
-                <div style={{ width: "250px" }}>{email}</div>
-                <div style={relationshiptWrapperStyle}>
+                <div id="user-address">{address}</div>
+                <div id="user-number">{number}</div>
+                <div id="user-email">{email}</div>
+                <div style={relationshiptWrapperStyle} id="user-relationship">
                     <div style={relationshiptStyle}>{relationship}</div>
                 </div>
                 <div id="edit" onClick={(e) => onItemSelected(id)}>

@@ -59,6 +59,7 @@ body {
 
 #submit-register-wrapper {
     height: 20px;
+    margin-bottom: 10px;
 }
 #submit-register {
     display: block;
@@ -319,10 +320,11 @@ body {
     font-family: "Varela Round", serif;
     padding: 0 20px;
 }
+
 ::placeholder {
     text-align: center;
-    font-size: 14px;
-    color: rgba(128, 128, 128, 0.538);
+    font-size: 12px;
+    color: rgb(181, 181, 181);
 }
 
 #search {
@@ -503,4 +505,141 @@ body {
     position: fixed;
     display: flex;
     justify-content: start;
+}
+
+#toggle-password {
+    /* width: 5px;
+    height: 5px; */
+    /* background-color: red; */
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#header-name {
+    width: 300px;
+}
+#header-address {
+    width: 240px;
+}
+#header-number {
+    width: 210px;
+}
+#header-email {
+    width: 200px;
+}
+
+#user-name {
+    width: 180px;
+}
+#user-address {
+    width: 350px;
+}
+#user-number {
+    width: 130px;
+}
+#user-email {
+    width: 250px;
+}
+
+@media only screen and (max-width: 640px) {
+    /* hide element on small screens */
+    #login-img {
+        display: none;
+    }
+    #bg-register {
+        width: 100vh;
+    }
+    #title-hero {
+        font-size: 50px;
+        margin: 0 20px;
+    }
+    #bg-hero {
+        display: none;
+    }
+    #try-now {
+        font-size: 20px;
+    }
+    #login-now {
+        font-size: 17px;
+    }
+
+    #header-contacts {
+        width: 100vw;
+        margin: 10px 10px;
+        font-size: 9px;
+        justify-content: space-evenly;
+        padding-right: 40px;
+    }
+    #cells-container {
+        width: 100vw;
+        padding: 0;
+        overflow-y: auto;
+    }
+    /* #header-name {
+        width: 80px;
+    }
+    #header-address {
+        width: 70px;
+    }
+    #header-number {
+        width: 80px;
+    }
+    #header-email {
+        width: 80px;
+    } */
+
+    #cell {
+        font-size: 9px;
+    }
+    /* #user-address {
+        width: 100px;
+    }
+    #user-name {
+        width: 90px;
+    } */
+    /* 
+    #user-number {
+        width: 80px;
+    }
+    #user-email {
+        width: 90px;
+    } */
+    #form-container {
+        font-size: 10px;
+    }
+    #sort-by-wrapper,
+    #add-btn {
+        font-size: 10px;
+    }
+    #search-input,
+    #sort-by {
+        width: 50px;
+        height: 20px;
+    }
+    #sort-by {
+        font-size: 10px;
+    }
+    #modal-container {
+        width: 100vw;
+        margin: 20px;
+    }
+
+    #workplace-welcome {
+        font-size: 13px;
+    }
+    #workplace-logout {
+        font-size: 10px;
+    }
+    #main {
+        margin-top: 40px;
+        justify-content: space-around;
+        row-gap: 20px;
+    }
+    #workplace-header {
+        justify-content: space-around;
+        padding: 0;
+    }
+    #footer-desc {
+        font-size: 12px;
+    }
 }
