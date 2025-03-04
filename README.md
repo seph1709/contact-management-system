@@ -2,6 +2,7 @@
 >
 
 
+
 ## About
 [Contact Management System](https://github.com/seph1709/contact-management-system) is a simple and user friendly Single Page Application created with Laravel, InertiaJs, and React. Complete CRUD (Create, Read, Update, Delete) functionality. You can Login and Register your account; Add / Edit / Delete contacts; Search contacts by name; Sort contacts by default or alphabetical. 
 
@@ -17,24 +18,26 @@ If you don't have this three [Git](https://github.com/git-guides/install-git)
 [Laravel](https://laravel.com/docs/7.x/installation)
 [NodeJs](https://nodejs.org/en) kindly install it. If you have already installed from your computer you can proceed.
 
-``` bash
+
+
+``` code
 git clone https://github.com/seph1709/contact-management-system.git
 ```
-``` bash
+``` code
 cd Contact-Management-System
 
 ```
-``` bash
+``` code
 npm install
 ```
-``` bash
+``` code
 php artisan migrate
 ```
-``` bash
+``` code
 npm run dev
 ```
 open new terminal
-``` bash
+``` code
 php artisan serve
 ```
 now go to
