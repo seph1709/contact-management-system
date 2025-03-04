@@ -6,6 +6,7 @@ function Footer() {
         <div>
             <div id="back-btn-wrapper">
                 <div
+                    role="button"
                     id="back-btn"
                     onClick={(_) => {
                         router.visit(`/`);

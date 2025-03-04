@@ -4,6 +4,8 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import { HiOutlineMail } from "react-icons/hi";
 import { useState } from "react";
 import { IoLogIn } from "react-icons/io5";
+import { BiShow } from "react-icons/bi";
+import { BiHide } from "react-icons/bi";
 
 export default function Login() {
     let startingDataLocal, rawTokenLocal, userIDLocal, userNameLocal;
@@ -19,6 +21,9 @@ export default function Login() {
 
     const { get, data, setData, errors } = useForm();
     const [errorMessage, setErrorMessage] = useState();
+    const [togglePassword, setTogglePassword] = useState("password");
+    const [errorEmail, setErrorEmail] = useState();
+    const [errorPassword, setErrorPassword] = useState();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -39,6 +44,17 @@ export default function Login() {
                 return response.json();
             })
             .then((dataRaw) => {
+                const { errors } = dataRaw;
+
+                if (errors) {
+                    const { email, password } = errors;
+                    console.log(email, password);
+                    setErrorEmail(email);
+                    setErrorPassword(password);
+                }
+
+                console.log(errors);
+
                 const { token: rawToken, user, startingData } = dataRaw;
                 const { name } = user;
                 const { id } = user;
@@ -87,8 +103,14 @@ export default function Login() {
                                 </label>
                                 <input
                                     name="email"
-                                    onChange={(e) =>
-                                        setData("email", e.target.value)
+                                    onChange={(e) => {
+                                        setData("email", e.target.value);
+                                        setErrorEmail(null);
+                                    }}
+                                    style={
+                                        errorEmail
+                                            ? { border: "1px solid red" }
+                                            : {}
                                     }
                                 ></input>
                             </div>
@@ -105,13 +127,61 @@ export default function Login() {
                                         />
                                     </span>
                                 </label>
+
                                 <input
                                     name="password"
-                                    onChange={(e) =>
-                                        setData("password", e.target.value)
+                                    onChange={(e) => {
+                                        setData("password", e.target.value);
+                                        setErrorPassword(null);
+                                    }}
+                                    type={togglePassword}
+                                    style={
+                                        errorPassword
+                                            ? { border: "1px solid red" }
+                                            : {}
                                     }
-                                    type="password"
                                 ></input>
+                                <div
+                                    role="button"
+                                    id="toggle-password"
+                                    onClick={(e) => {
+                                        setTogglePassword((v) => {
+                                            if (v === "password") {
+                                                return "text";
+                                            } else {
+                                                return "password";
+                                            }
+                                        });
+                                    }}
+                                >
+                                    {" "}
+                                    <span></span>
+                                    {togglePassword === "password" ? (
+                                        <>
+                                            {" "}
+                                            <BiHide
+                                                size={14}
+                                                style={{
+                                                    display: "inline",
+                                                    marginRight: "5px",
+                                                }}
+                                            />{" "}
+                                            show
+                                        </>
+                                    ) : (
+                                        <>
+                                            <BiShow
+                                                size={14}
+                                                style={{
+                                                    display: "inline",
+                                                    marginRight: "5px",
+                                                }}
+                                            />
+                                            hide
+                                        </>
+                                    )}
+                                    {"  "} password
+                                </div>
                             </div>
                             {errorMessage && (
                                 <div style={{ color: "red" }}>
