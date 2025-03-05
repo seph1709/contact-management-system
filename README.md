@@ -16,7 +16,7 @@
 ## Dev Run 
 If you don't have this four [Git](https://github.com/git-guides/install-git)
 [Laravel](https://laravel.com/docs/7.x/installation)
-[NodeJs](https://nodejs.org/en) Xampp kindly install it. If you have already installed from your computer you can proceed.
+[NodeJs](https://nodejs.org/en) Xampp kindly install it and if you have already installed from your computer you can proceed.
 
 
 
