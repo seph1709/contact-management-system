@@ -46,7 +46,7 @@ open new terminal
 ``` code
 php artisan serve
 ```
-now go to
+open this url
 ``` bash
 http://127.0.0.1:8000
 
