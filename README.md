@@ -4,7 +4,9 @@
 
 
 ## About
-[Contact Management System](https://github.com/seph1709/contact-management-system) is a simple and user friendly Single Page Application created with Laravel, InertiaJs, and React. Complete CRUD (Create, Read, Update, Delete) functionality. You can Login and Register your account; Add / Edit / Delete contacts; Search contacts by name; Sort contacts by default or alphabetical. 
+The [Contact Management System](https://github.com/seph1709/contact-management-system) is a simple and user-friendly Single Page Application built with Laravel, InertiaJS, and React. It features complete CRUD (Create, Read, Update, Delete) functionality. Users can register and log in to manage their contacts, including adding, editing, and deleting entries. The system also allows searching for contacts by name and sorting them either by default order or alphabetically.
+
+
 
 
 ## Screenshots
