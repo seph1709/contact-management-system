@@ -14,9 +14,10 @@
 ![Screenshot (1770)](https://github.com/user-attachments/assets/0b3ca442-00c6-4d89-8ede-eda032f7972b)
 
 ## Dev Run 
-You need this four [Git](https://github.com/git-guides/install-git)
-[Laravel](https://laravel.com/docs/7.x/installation)
-[NodeJs](https://nodejs.org/en) and Xampp installed from your computer before proceeding.
+You need this four [Git](https://github.com/git-guides/install-git), 
+[Laravel](https://laravel.com/docs/7.x/installation), 
+[NodeJs](https://nodejs.org/en), and [Xampp](https://www.simplilearn.com/tutorials/php-tutorial/php-using-xampp) installed from your computer before proceeding.
+
 
 
 
