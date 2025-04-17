@@ -18,7 +18,7 @@ The [Contact Management System](https://github.com/seph1709/contact-management-s
 ## Dev Run
 You need to have  [Git](https://github.com/git-guides/install-git), [Laravel](https://laravel.com/docs/7.x/installation), [Node.js](https://nodejs.org/en), and [
 XAMPP](https://www.simplilearn.com/tutorials/php-tutorial/php-using-xampp
-) installed on your computer before proceeding.
+) installed on your computer.
 
 
 
