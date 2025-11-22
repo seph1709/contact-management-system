@@ -3,7 +3,7 @@ import FormContainer from "./FormContainer";
 import SortBy from "../Components/Sortby";
 import Search from "../Components/Search";
 import AddButton from "../Components/AddButton";
-import HeaderContacts from "../Components/Headercontacts";
+import HeaderContacts from "../Components/HeaderContacts";
 import Contacts from "../Components/Contacts";
 import Modal from "../Components/Modal";
 import FooterBoard from "../Components/FooterBoard";
@@ -52,7 +52,7 @@ function Board({
     }
 
     if (sortBy === "alphabetical") {
-        // intercep the data if true then sort to alphabetical
+        // intercept the data if true then sort to alphabetical
         boardData = sortToAlphabetical();
     }
 
