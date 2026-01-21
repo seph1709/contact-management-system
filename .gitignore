@@ -21,3 +21,5 @@
 # /.nova
 # /.vscode
 # /.zed
+
+.vercel
