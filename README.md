@@ -4,7 +4,7 @@
 
 
 ## About
-[Contact Management System](https://github.com/seph1709/contact-management-system) is a simple and user-friendly Single Page Application built with Laravel, InertiaJS, and React. It features complete CRUD (Create, Read, Update, Delete) functionality.
+[Contact Management System](https://github.com/seph1709/contact-management-system) is a simple and user-friendly Single Page Application built with Laravel, InertiaJS, and React. It features complete CRUD (Create, Read, Update, Delete) functionality..
 
 
 
