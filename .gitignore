@@ -7,6 +7,7 @@
 # /storage/pail
 # /vendor
 .env
+public\hot
 # .env.backup
 # .env.production
 # .phpactor.json
@@ -21,5 +22,7 @@
 # /.nova
 # /.vscode
 # /.zed
+
+.vercel
 
 .vercel
